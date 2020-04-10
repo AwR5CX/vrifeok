@@ -1,0 +1,26 @@
+{
+  "name": "MDR le formulaire",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Une extension qui change le comportement du formulaire du gouvernement pour que la date de génération soit toujours 15 minutes avant le moment où le bouton est pressé",
+  "homepage_url": "https://media.interieur.gouv.fr/deplacement-covid-19/",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "tabs",
+    "https://media.interieur.gouv.fr/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://media.interieur.gouv.fr/deplacement-covid-19/"
+      ],
+      "js": [
+        "inject.js"
+      ]
+    }
+  ]
+}
